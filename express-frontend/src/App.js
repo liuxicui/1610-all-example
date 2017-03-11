@@ -6,18 +6,26 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      username: ''
+      users: []
     };
   }
   componentWillMount() {
-    axios.get('http://localhost:3000/username').then( (response)=> {
-      return this.setState({username:response.data.username})
+    axios.get('http://localhost:3000/users').then( (response)=> {
+      this.setState({users:response.data.users});
+
     })
   }
   render(){
+    let userList = this.state.users.map((user,i) => {
+      return(
+        <div key={i}>
+          name:{user.username}
+        </div>
+      )
+    })
     return(
       <div>
-        {this.state.username}
+        个人资料:{userList}
       </div>
     )
   }

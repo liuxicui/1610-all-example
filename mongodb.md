@@ -74,7 +74,8 @@ db.users.remove({_id:  ObjectId("584b5dbf30a2a2cbf4c4c3f5")})
 ```
 db.users.remove({})
 ```
-#图形化的操作界面 mongo-express
+# 图形化的操作界面 mongo-express
+
 (1)全局安装,**npm install -g mongo-express**
 (2)先要找到　mongo-express 的配置文件,**npm list -g mongo-express**
 (3)找到安装位置后，就可以进入安装文件夹，来修改配置文件了
@@ -109,26 +110,3 @@ mongo = {
 mongo-express
 ```
 (6)在浏览器上打开localhost:8081中打开，用户名：admin,密码：pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-end
